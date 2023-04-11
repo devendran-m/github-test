@@ -1,0 +1,66 @@
+name: New Project Creation
+description: Create a project entry
+title: "[New Project]: Name of Your Project"
+labels: ["new-project"]
+assignees:
+  - devendran-m
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is a request template to create a new project entry in the Grants Repo.
+  - type: input
+    id: project
+    attributes:
+      label: Project name
+      placeholder: My Super Shiny Project
+    validations:
+      required: true
+  - type: input
+    id: grant-ref
+    attributes:
+      label: Grant Reference
+      placeholder: "707"
+    validations:
+      required: true
+  - type: input
+    id: dxd-link
+    attributes:
+      label: DevXDAO Link
+      placeholder: "https://portal.devxdao.com/app/proposal/707"
+  - type: textarea
+    id: description
+    attributes:
+      label: Project description
+      description: Brief description of the project. What are the project objectives, what stage is your project at, what are the key milestones etc.
+    validations:
+      required: true
+  - type: dropdown
+    id: grant-status
+    attributes:
+      label: Grant Status
+      description: Grant Status
+      options:
+        - Accepted
+        - In Progress
+        - Completed
+    validations:
+      required: true
+  - type: textarea
+    id: milestones
+    attributes:
+      label: Milestones
+      description: Provide the Milestone Details - Milestone Dates, Description, Acceptance Criteria & Reports
+    validations:
+      required: true
+  - type: input
+    id: dxd-link
+    attributes:
+      label: Grant/proposal number if this is a project funded by the DEVxDAO
+  - type: input
+    id: other-links
+    attributes:
+      label: Links
+      description: Provide the useful links like DevXDAO Grant Link, Twitter, etc.
+    validations:
+      required: true
