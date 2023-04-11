@@ -52,11 +52,7 @@ body:
       label: Milestones
       description: Provide the Milestone Details - Milestone Dates, Description, Acceptance Criteria & Reports
     validations:
-      required: true
-  - type: input
-    id: dxd-link
-    attributes:
-      label: Grant/proposal number if this is a project funded by the DEVxDAO
+      required: true  
   - type: input
     id: other-links
     attributes:
