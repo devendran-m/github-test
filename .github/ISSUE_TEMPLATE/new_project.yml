@@ -57,6 +57,6 @@ body:
     id: other-links
     attributes:
       label: Links
-      description: Provide the useful links like DevXDAO Grant Link, Twitter, etc.
+      description: Provide the useful links like Project, Telegram, Twitter, etc.
     validations:
       required: true
