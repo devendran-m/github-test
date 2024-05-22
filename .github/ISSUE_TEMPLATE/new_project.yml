@@ -1,7 +1,8 @@
 name: New Project Creation
 description: Create a project entry
-title: "[New Project]: Name of Your Project"
-labels: ["new-project"]
+title: '[New Project]: Name of Your Project'
+labels:
+  - new-project
 assignees:
   - devendran-m
 body:
@@ -20,19 +21,20 @@ body:
     id: grant-ref
     attributes:
       label: Grant Reference
-      placeholder: "707"
+      placeholder: '707'
     validations:
       required: true
   - type: input
     id: dxd-link
     attributes:
       label: DevXDAO Link
-      placeholder: "https://portal.devxdao.com/app/proposal/707"
+      placeholder: https://portal.devxdao.com/app/proposal/707
   - type: textarea
     id: description
     attributes:
       label: Project description
-      description: Brief description of the project. What are the project objectives, what stage is your project at, what are the key milestones etc.
+      description: Brief description of the project. What are the project objectives,
+        what stage is your project at, what are the key milestones etc.
     validations:
       required: true
   - type: dropdown
@@ -50,9 +52,10 @@ body:
     id: milestones
     attributes:
       label: Milestones
-      description: Provide the Milestone Details - Milestone Dates, Description, Acceptance Criteria & Reports
+      description: Provide the Milestone Details - Milestone Dates, Description,
+        Acceptance Criteria & Reports
     validations:
-      required: true  
+      required: true
   - type: input
     id: other-links
     attributes:

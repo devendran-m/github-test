@@ -1,0 +1,55 @@
+name: Condor Release Feedback Form
+description: Please share your feedback or issues you face in incorporating Condor Release in your application/project.
+title: '[Condor-Feedback]: Specify your feedback/issue'
+labels:
+  - condor-feedback
+assignees:
+  - devendran-m
+  - piotr-dziubecki
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is a feedback form, to consolidate Condor feedback and/or issues.
+  - type: input
+    id: feedback
+    attributes:
+      label: Feedback
+      placeholder: Elaborate your feedback/issue
+    validations:
+      required: true
+  - type: dropdown
+    id: node-component
+    attributes:
+      label: Node component
+      description: Specify the node component pertaining to the feedback/issue.
+      options:
+        - Node
+        - JSON RPC
+        - Execution Engine
+        - SSE
+        - NCTL
+        - CCTL
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Feedback / Issue Description
+      description: Explain in detail the feedback / issue.
+    validations:
+      required: true
+  - type: textarea
+    id: error-info
+    attributes:
+      label: Additional Info
+      description: Share additional info that can help in analysis. 
+    validations:
+      required: true
+  - type: input
+    id: error-links
+    attributes:
+      label: Logs/Screenshots
+      description: Please provide logs, screenshots, links that will help speed up the analysis.
+    validations:
+      required: true
