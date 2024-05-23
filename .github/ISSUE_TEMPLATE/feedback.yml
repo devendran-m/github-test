@@ -15,10 +15,12 @@ body:
     id: type
     attributes:
       label: Category
-      description: Please choose the category that best fits your needs below.
+      description: Please choose the category that best describes your needs.
       options:
         - Feedback
-        - Bug/Issue        
+        - Bug/Issue
+    validations:
+      required: true
   - type: input
     id: email
     attributes:
