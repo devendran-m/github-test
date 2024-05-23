@@ -1,6 +1,6 @@
 name: Condor Release Feedback Form
 description: Please share your feedback or issues you face in incorporating Condor Release in your application/project.
-title: '[Condor-Feedback]: Specify your feedback/issue'
+title: '[Condor-Feedback]: Specify your feedback/issue in brief'
 labels:
   - condor-feedback
 assignees:
