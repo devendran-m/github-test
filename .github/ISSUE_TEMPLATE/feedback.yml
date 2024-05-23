@@ -11,18 +11,46 @@ body:
     attributes:
       value: |
         This is a feedback form, to consolidate Condor feedback and/or issues.
-  - type: input
-    id: feedback
+  - type: dropdown
+    id: type
     attributes:
-      label: Feedback
-      placeholder: Elaborate your feedback/issue
+      label: Category
+      description: Please choose the category that best fits your needs below.
+      options:
+        - Feedback
+        - Bug/Issue        
+  - type: input
+    id: email
+    attributes:
+      label: Your email address
+      placeholder: john@doe.com
+    validations:
+      required: true
+  - type: input
+    id: project-name
+    attributes:
+      label: Integration Project Name(Optional)
+      placeholder: CasperWallet
+      description: Name of the project with Casper, if applicable
+    validations:
+      required: false
+  - type: dropdown
+    id: casper-network
+    attributes:
+      label: Casper Network
+      description: Please choose the network or environment related to the feedback, bug, or issue.
+      options:
+        - Devnet
+        - Integration-Test
+        - Testnet
+        - Mainnet        
     validations:
       required: true
   - type: dropdown
-    id: node-component
+    id: node-functionality
     attributes:
-      label: Node component
-      description: Specify the node component pertaining to the feedback/issue.
+      label: Node Functionality
+      description: Please specify the primary function of the node on the Casper Network related to the feedback or issue.
       options:
         - Node
         - JSON RPC
@@ -30,26 +58,30 @@ body:
         - SSE
         - NCTL
         - CCTL
+        - Validator
+        - Consensus
+        - Other
     validations:
       required: true
   - type: textarea
-    id: description
+    id: feedback-issue
     attributes:
-      label: Feedback / Issue Description
-      description: Explain in detail the feedback / issue.
-    validations:
-      required: true
-  - type: textarea
-    id: error-info
-    attributes:
-      label: Additional Info
-      description: Share additional info that can help in analysis. 
+      label: Description
+      placeholder: Please elaborate your feedback/ bug or issue here.
+      description: Please provide a detailed description of your feedback, bug, or issue.
     validations:
       required: true
   - type: input
-    id: error-links
+    id: date-since
     attributes:
-      label: Logs/Screenshots
-      description: Please provide logs, screenshots, links that will help speed up the analysis.
+      label: Date Issue Began(optional)
+      description: When did you first notice this issue? 
     validations:
-      required: true
+      required: false
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attachments (optional)
+      description: Please attach any logs, screenshots, or links that may help with the analysis.
+    validations:
+      required: false
